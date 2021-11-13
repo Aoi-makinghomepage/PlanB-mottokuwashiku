@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  header{
+    height: 90px;
+    background-color: #FADEB4;
+    z-index: 9999;
+  }
+  
+  .header nav a{
+    color:black;
+  }
+
+  .header-nav {
+    position: fixed;
+    width: 100%;
+    font-family:Meiryo;
+    display:flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
+    top:0;
+  }
+  
+  nav {
+    margin-right: 5%;
+    margin-top:0;
+  }
+
+  #first-block {
+    height: 750px;
+    width:100%;
+    background-color:white;
+  }
+   
+   .title-1{
+     display:flex;
+   }
+
+    .explain1{
+       display:flex;
+       margin-top: 120px;
+     }
+    
+      .explain1-1{
+        font-size: 40px;
+        font-family: Yellowtail;
+        margin-left: 20%;
+        margin-right: 2%;
+      }
+
+      .explain1-2{
+       font-size: 40px;
+       font-family: Radley;
+      }
+
+    .explain1-3{
+      font-size: 40px;
+      font-family: Radley;
+      margin-left: 20%;
+    }
+
+    .first-image{
+      height:455.11px;
+      width: 782px;
+      position:relative;
+      top: 2px;
+      left: 600px;
+    }
+  
+  .second-block {
+    display: flex;
+    height: 850px;
+    width:100%;
+    background-color: white;
+    margin-top: 10%;
+  }
+
+    .second-image{
+      height: 750px;
+      width: 346px;
+      margin-left: 16%;
+      margin-top:auto;
+      margin-bottom: auto;
+      margin-right: 6%;
+    }
+
+    .letter2{
+      margin-top:auto;
+      margin-bottom: auto; 
+    }
+
+    .jenre2{
+     display:flex;
+    }
+
+     .jenre2-1{
+       font-size: 24px;
+       font-family: Radley;
+       color:black;
+       margin-right:50px;
+      }
+
+      .jenre2-2{
+       font-size: 24px;
+       font-family: Radley;
+       color:#FF725E;
+      }
+
+    .title2{
+      font-size: 45px;
+      font-family: Radley;
+    }
+
+    .explain2{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+  
+  .miniblock1{
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+
+  .third-block {
+    display: flex;
+    height: 850px;
+    width:100%;
+    background-color: white;
+  }
+
+   .third-image{
+     height: 750px;
+     width: 346px;
+     margin-top:auto;
+     margin-bottom: auto;
+     margin-left: 16%;
+     margin-right: 6%;
+    }
+
+    .letter3{
+      margin-top:auto;
+      margin-bottom: auto; 
+    }
+
+   .title3{
+     font-size: 45px;
+     font-family: Radley;
+    }
+
+    .explain3{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+  .fourth-block{
+    display: flex;
+    width: 100%;
+    height: 400px;
+    background-color: white;
+  }
+  
+   .fourth-image{
+     width: 431px;
+     height: 360px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: auto;
+     margin-bottom: auto;
+    }
+  
+  .fifth-block{
+    display: flex;
+    height: 3000px;
+    width:100%;
+    background-color: white;
+  }
+
+   .letter5{
+     margin-top:auto;
+     margin-bottom: 21%; 
+     margin-left: 15%;
+     margin-right: 6%;
+    }
+
+   .jenre5{
+     display:flex;
+    }
+
+     .jenre5-1{
+       font-size: 24px;
+       font-family: Radley;
+       color:black;
+       margin-right:50px;
+      }
+
+     .jenre5-2{
+       font-size: 24px;
+       font-family: Radley;
+       color:#FF725E;
+      }
+
+    .title5{
+      font-size: 45px;
+      font-family: Radley;
+     }
+
+    .explain5{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+    .fifth-image{
+      height: 750px;
+      width: 346px;
+      margin-top:auto;
+      margin-left: 1%;
+      margin-bottom: 3%;
+    }
+
+  .miniblock2{
+     width:100%;
+     height:50px;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     background-color: white;
+  }
+
+  .sixth-block{
+    display: flex;
+    height: 850px;
+    width:100%;
+    background-color: white;
+  }
+    
+   .letter6{
+     margin-top:auto;
+     margin-bottom: auto; 
+     margin-left: 17%;
+     margin-right: 5.5%;
+    }
+
+    .title6{
+      font-size: 45px;
+      font-family: Radley;
+    }
+
+    .explain6{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+    .sixth-image{
+      height: 750px;
+      width: 346px;
+      margin-top:auto;
+      margin-bottom: auto;
+      margin-left: 6%;
+    }
+
+  .seventh-block{
+    display: flex;
+    width:100%;
+    height: 480px;
+    background-color: white;
+  }
+    
+    .seventh-image{
+      height: 360px;
+      width: 431px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+  .eighth-block{
+    display: flex;
+    height: 850px;
+    width:100%;
+    background-color: white;
+  }
+  
+   .eighth-image{
+     height: 750px;
+     width: 346px;
+     margin-top:auto;
+     margin-bottom: auto;
+     margin-left: 16%;
+     margin-right: 6%;
+    }
+
+    .letter8{
+      margin-top:auto;
+      margin-bottom: auto; 
+    }
+
+   .jenre8{
+     display:flex;
+    }
+
+     .jenre8-1{
+       font-size: 24px;
+       font-family: Radley;
+       color:black;
+       margin-right:50px;
+      }
+
+     .jenre8-2{
+       font-size: 24px;
+       font-family: Radley;
+       color:#FF725E;
+      }
+
+   .title8{
+     font-size: 45px;
+     font-family: Radley;
+    }
+
+    .explain8{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+  .ninth-block{
+    display: flex;
+    width:100%;
+    height: 480px;
+    background-color: white;
+  }
+
+    .ninth-image{
+      height: 360px;
+      width: 431px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+  .tenth-block{
+    display: flex;
+    width:100%;
+    height: 850px;
+    background-color: white;
+  }
+
+   .letter10{
+    margin-top:auto;
+    margin-bottom: auto; 
+    margin-left: 15%;
+   }
+
+    .jenre10{
+     display:flex;
+    }
+
+     .jenre10-1{
+       font-size: 24px;
+       font-family: Radley;
+       color:black;
+       margin-right:50px;
+      }
+
+     .jenre10-2{
+       font-size: 24px;
+       font-family: Radley;
+       color:#FF725E;
+      }
+
+    .title10{
+      font-size: 45px;
+      font-family: Radley;
+     }
+
+    .explain10{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+    .tenth-image{
+      height: 750px;
+      width: 346px;
+      margin-top:auto;
+      margin-bottom: auto;
+      margin-left: 6%;
+    }
+
+  
+  footer{
+    height: 80px;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+    color: #fff;
+  }
+
+  #page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+    background: #FF725E;
+    opacity: 1;
+    border-radius:30px;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: hsla(0, 0%, 0%, 0.479);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
