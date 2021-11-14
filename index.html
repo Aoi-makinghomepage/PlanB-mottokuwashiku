@@ -5,10 +5,14 @@
    <title>PlanB-もっと詳しく</title>
    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
  </head>
  <body>
-  <header class="top">
-    <ul class="ddmenu">
+  <header id="top">
+    <div class="title">
+     <ul class="ddmenu">
       <li><a href="#">≡</a>
          <ul>
            <li><a href="#second-block">閲覧及び検索</a></li>
@@ -16,10 +20,44 @@
            <li><a href="#">主ページに戻る</a></li>
          </ul>
       </li>
-    </ul>  
-
-    <image src="images/block0.jpg" class="title0"></image>
+     </ul>  
+    </div> 
+    <div class="title0-2">
+    <p class="title0">PlanB</p>
+    </div>
   </header>
+
+  <script language="javascript" type="text/javascript">
+    ( function() {
+     const target     = document.getElementById( 'top' ),
+        height     = 64;
+     let offset       = 0,
+        lastPosition = 0,
+        ticking      = false;
+   
+     function onScroll() {
+      if( lastPosition > height ) {
+        if( lastPosition > offset ) {
+          target.classList.add( 'head-animation' );
+        } else {
+        target.classList.remove( 'head-animation' );
+       }
+        offset = lastPosition;
+      }
+    }
+   
+    window.addEventListener( 'scroll', function(e) {
+      lastPosition = window.scrollY;
+      if( !ticking ) {
+       window.requestAnimationFrame( function() {
+         onScroll( lastPosition );
+         ticking = false;
+       });
+       ticking = true;
+     }
+     });
+     })();
+  </script>
 
     <div id="first-block">
       <div class="title1">
@@ -34,7 +72,7 @@
       <image src="images/block1_pana.jpg" class="first-image"></image>
     </div>
 
-    <div class="second-block">
+    <div id="second-block">
       <image src="images/block2.jpg" class="second-image"></image>
 
       <div class="letter2">
@@ -115,7 +153,7 @@
       <image src="images/block7_pana.jpg" class="seventh-image"></div>
     </div>
 
-    <div class="eighth-block">
+    <div id="eighth-block">
       <image src="images/block8.jpg" class="eighth-image"></image>
 
       <div class="letter8">

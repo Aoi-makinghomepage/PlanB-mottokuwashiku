@@ -4,21 +4,37 @@
   }
 
   header{
+    position:fixed;
+    top:0;
+    width:100%;
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
     height: 90px;
     background-color: #FADEB4;
     z-index: 9999;
   }
 
-  .top{
+  .head-animation {
+    transform: translateY(-100%);
+  }
+
+  #top{
     display:flex;
+    position:fixed;
+    top:0;
+    width:100%;
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
+    height: 90px;
+    background-color: #FADEB4;
+    z-index: 9999;
   }
   
   .title0{
     justify-content: center;
     align-items: center;
-    height:60px;
-    width:200px;
+    font-family: 'Qwigley', cursive;
+    font-size: 80px;
     margin: auto;
+    padding-left: 250%;
   }
   
   .ddmenu {
@@ -91,7 +107,7 @@
     
       .explain1-1{
         font-size: 40px;
-        font-family: Yellowtail;
+        font-family: 'Qwigley', cursive;
         margin-left: 20%;
         margin-right: 2%;
       }
@@ -115,7 +131,7 @@
       left: 600px;
     }
   
-  .second-block {
+  #second-block {
     display: flex;
     height: 850px;
     width:100%;
@@ -330,7 +346,7 @@
       margin-bottom: auto;
     }
 
-  .eighth-block{
+  #eighth-block{
     display: flex;
     height: 850px;
     width:100%;
