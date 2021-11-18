@@ -9,15 +9,22 @@
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
  </head>
+ 
  <body>
   <header id="top">
     <div class="title">
      <ul class="ddmenu">
       <li><a href="#">≡</a>
          <ul>
-           <li><a href="#second-block">閲覧及び検索</a></li>
-           <li><a href="#eighth-block">投稿</a></li>
-           <li><a href="#">主ページに戻る</a></li>
+           <li><a href="#">ホーム</a></li>
+           <li><a href="#">機能</a></li>
+           <li><a href="#second-block">　閲覧及び検索</a></li>
+           <li><a href="#second-block">　　お出かけ</a></li>
+           <li><a href="#fifth-block">　　プレゼント</a></li>
+           <li><a href="#eighth-block">　投稿</a></li>
+           <li><a href="#eighth-block">　　お出かけ</a></li>
+           <li><a href="#tenth-block">　　プレゼント</a></li>
+           <li><a href="#first-block">トップに戻る</a></li>
          </ul>
       </li>
      </ul>  
@@ -63,26 +70,54 @@
       <div class="title1">
        <div class="explain1">
          <p class="explain1-1">PlanB</p>
-         <p class="explain1-2">はお出かけプラン選び、プレゼント選びに
-       </div>
-
-       <div class="title1-1">
-         <p class="explain1-3">特化したアプリです</p>
+         <p class="explain1-2">はお出かけプラン選び、プレゼント選びに<br>特化したアプリです</p>
        </div>
       <image src="images/block1_pana.jpg" class="first-image"></image>
     </div>
 
     <div id="second-block">
-      <image src="images/block2.jpg" class="second-image"></image>
+      <section class="carousel" aria-label="Gallery">
+        <ol class="carousel__viewport">
+          <li id="carousel__slide1"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper">
+              <a href="#carousel__slide2"
+                 class="carousel__next">Go to next slide</a>
+            </div>
+          </li>
+          <li id="carousel__slide2"
+              tabindex="0"
+              class="carousel__slide">
+            <div class="carousel__snapper"></div>
+            <a href="#carousel__slide1"
+               class="carousel__prev">Go to previous slide</a>
+          </li>
+        </ol>
+        <aside class="carousel__navigation">
+          <ol class="carousel__navigation-list">
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide1"
+                 class="carousel__navigation-button">Go to slide 1</a>
+            </li>
+            <li class="carousel__navigation-item">
+              <a href="#carousel__slide2"
+                 class="carousel__navigation-button">Go to slide 2</a>
+            </li>
+          </ol>
+        </aside>
+      </section>  
 
       <div class="letter2">
         <div class="jenre2">
           <p class="jenre2-1">閲覧及び検索</p>
           <p class="jenre2-2">お出かけプラン</p>
         </div>
+        <br>
        <p class="title2">
          エリア、プラン内容を選び自<br>分に合ったプランをすぐに見<br>つけられる
        </p>
+       <br>
        <p class="explain2">
          やりたいことは決まっているけど、行き先が見つからない！<br>
          そんな人にぴったりです。
@@ -95,12 +130,13 @@
     </div>
 
     <div class="third-block">
-      <image src="images/block3.jpg" class="third-image"></image>
+      <image src="images/block3new.jpg" class="third-image"></image>
 
       <div class="letter3">
         <p class="title3">
          エリアをより細かく指定、マイ<br>ナーなプランも見つけられる
         </p>
+        <br>
         <p class="explain3">
          市町村名まで指定することで、現在地からすぐ行けるところを<br>
          ピックアップでき、キーワード検索にかけることで、幅広く<br>
@@ -112,22 +148,24 @@
       <image src="images/block4_pana.jpg" class="fourth-image"></div>
     </div>
 
-    <div class="fifth-block">
+    <div id="fifth-block">
       <div class="letter5">
        <div class="jenre5">
          <p class="jenre5-1">閲覧及び検索</p>
          <p class="jenre5-2">プレゼント</p>
        </div>
+       <br>
        <p class="title5">
          プレゼントの人気、新たな<br>トレンドを知ることができる
        </p>
+       <br>
        <p class="explain5">
          投稿のいいね！の数に基づく人気順、新着順の２種類で投稿<br>
          の表示が選択できます。
        </p>
       </div>
 
-      <image src="images/block5.jpg" class="fifth-image"></image>
+      <image src="images/block5new.jpg" class="fifth-image"></image>
     </div>
 
     <div class="miniblock2">
@@ -139,6 +177,7 @@
        <p class="title6">
         自分の状況に合ったもの<br>だけに絞りこむ
        </p>
+       <br>
        <p class="explain6">
         贈る相手や、金額、プレゼントの名目などに絞って<br>
         検索をかけることによって、よりスピーディに参考<br>
@@ -146,7 +185,7 @@
        </p>
       </div>
 
-      <image src="images/block6.jpg" class="sixth-image"></image>
+      <image src="images/block6new.jpg" class="sixth-image"></image>
     </div>
 
     <div class="seventh-block">
@@ -154,17 +193,19 @@
     </div>
 
     <div id="eighth-block">
-      <image src="images/block8.jpg" class="eighth-image"></image>
+      <image src="images/block8new.jpg" class="eighth-image"></image>
 
       <div class="letter8">
        <div class="jenre8">
          <p class="jenre8-1">投稿</p>
          <p class="jenre8-2">お出かけプラン</p>
        </div>
+       <br>
        <p class="title8">
          実際にお出掛けして共有・知って<br>
          欲しいことを投稿する場合
        </p>
+       <br>
        <p class="explain8">
          場所はどこなのか、何の目的で利用したのか、予算は<br>
          いくらか、移動手段、混雑具合、など詳しく投稿する<br>
@@ -177,15 +218,17 @@
       <image src="images/block9_cuate.jpg" class="ninth-image"></div>
     </div>
 
-    <div class="tenth-block">
+    <div id="tenth-block">
        <div class="letter10">
          <div class="jenre10">
           <p class="jenre10-1">投稿</p>
           <p class="jenre10-2">プレゼント</p>
        </div>
+       <br>
        <p class="title10">
          実際にプレゼントを贈ったもの<br>と投稿する場合
        </p>
+       <br>
        <p class="explain10">
          誰あてにおくるのか、金額はいくらくらいか、何の目的で贈った<br>
          のか詳しく投稿するようにチェック項目欄を設けています。<br>
@@ -193,12 +236,13 @@
        </p>
       </div>
 
-      <image src="images/block10.jpg" class="tenth-image"></image>
+      <image src="images/block10new.jpg" class="tenth-image"></image>
 
     </div>
 
     <footer> 
-      <small>© 2021　しゃいにんぐ☆</small>   
+      <p class="footer1">
+      <small>© 2021　しゃいにんぐ☆</small>  </p> 
     </footer>
 
     <div id="page_top"><a href="#">
