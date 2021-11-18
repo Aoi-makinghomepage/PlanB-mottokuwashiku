@@ -252,7 +252,7 @@
    
   .carousel__slide:nth-child(even) {
     width:100%;
-    background-image:url(../images/block5new.jpg); 
+    background-image:url(../images/blocknew.jpg); 
     background-size: 100%;
   }
    
