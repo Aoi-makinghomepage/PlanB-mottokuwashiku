@@ -32,10 +32,11 @@
     justify-content: center;
     align-items: center;
     font-family: 'Qwigley', cursive;
-    font-size: 80px;
-    margin: auto;
+    font-size: 48px;
+    margin:0;
+    margin-left: 500px;
     height:90px;
-    padding-left: 250%;
+    padding-top:15px;
     background-color: #FADEB4;
   }
   
@@ -377,8 +378,8 @@
     .letter2{
       margin-top:auto;
       margin-bottom: auto; 
-      margin-left: -160px; 
-      margin-right: 270.5px;
+      margin-left: -120px; 
+      margin-right: 260px;
       line-height: 40px;
     }
 
