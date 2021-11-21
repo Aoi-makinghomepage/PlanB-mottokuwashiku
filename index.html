@@ -1,251 +1,987 @@
-<!DOCTYPE html>
-<html lang="ja">
- <head>
-   <meta charset="UTF-8">
-   <title>PlanB-もっと詳しく</title>
-   <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
-   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Qwigley&display=swap" rel="stylesheet">
- </head>
- 
- <body>
-  <header id="top">
-    <div class="title">
-     <ul class="ddmenu">
-      <li><a href="#">≡</a>
-         <ul>
-           <li><a href="https://takamiken.github.io/PlanB/">ホーム</a></li>
-           <li><a href="#">機能</a></li>
-           <li><a href="#second-block">　閲覧及び検索</a></li>
-           <li><a href="#second-block">　　お出かけ</a></li>
-           <li><a href="#fifth-block">　　プレゼント</a></li>
-           <li><a href="#eighth-block">　投稿</a></li>
-           <li><a href="#eighth-block">　　お出かけ</a></li>
-           <li><a href="#tenth-block">　　プレゼント</a></li>
-           <li><a href="#first-block">トップに戻る</a></li>
-         </ul>
-      </li>
-     </ul>  
-    </div> 
-    <div class="title0">
-    PlanB
-    </div>
-  </header>
+* {
+    margin: 0;
+    padding: 0 ;
+  }
 
-  <script language="javascript" type="text/javascript">
-    ( function() {
-     const target     = document.getElementById( 'top' ),
-        height     = 64;
-     let offset       = 0,
-        lastPosition = 0,
-        ticking      = false;
+  header{
+    position:fixed;
+    top:0;
+    width:100%;
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
+    height: 90px;
+    background-color: #FADEB4;
+    z-index: 9999;
+  }
+
+  .head-animation {
+    transform: translateY(-100%);
+  }
+
+  #top{
+    display:flex;
+    position:fixed;
+    top:0;
+    width:100%;
+    transition: .3s cubic-bezier(.4, 0, .2, 1);
+    height: 90px;
+    background-color: #FADEB4;
+    z-index: 9999;
+  }
+  
+  .title0{
+    justify-content: center;
+    align-items: center;
+    font-family: 'Qwigley', cursive;
+    font-size: 48px;
+    margin:0;
+    margin-left: 500px;
+    height:90px;
+    padding-top:15px;
+    background-color: #FADEB4;
+  }
+  
+  .ddmenu {
+    margin: 0px;               /* メニューバー外側の余白(ゼロ) */
+    padding: 0px 0px 0px 0px; /* メニューバー内側の余白(左に15px) */
+    background-color: #FADEB4; /* バーの背景色(濃い赤色) */
+  }
+  
+  .ddmenu li {
+    width: 242px;           /* メニュー項目の横幅(125px) */
+    font-size: 40px;    
+    list-style-type: none;  /* ★2:リストの先頭記号を消す */
+    position: relative;     /* ★3:サブメニュー表示の基準位置にする */
+  }
+  .ddmenu a {
+    background-color: #FADEB4; /* メニュー項目の背景色(濃い赤色) */
+    color: black;              /* メニュー項目の文字色(白色) */
+    line-height: 90px;         /* メニュー項目のリンクの高さ(40px) */
+    text-align: left;        /* メインメニューの文字列の配置(中央寄せ) */
+    text-decoration: none;     /* メニュー項目の装飾(下線を消す) */
+    font-weight: bold;         /* 太字にする */
+    padding-left: 30px;
+    display: block;            /* ★4:項目内全域をリンク可能にする */
+  }
+  .ddmenu a:hover {
+    background-color: #FADEB4; /* メニュー項目にマウスが載ったときの背景色(淡いピンク) */
+    color: #dd0000;            /* メニュー項目にマウスが載ったときの文字色(濃い赤色) */
+  }
+  
+  /* ▼サブメニューは、とりあえず非表示にしておく */
+  .ddmenu ul {
+    display: none;         /* ★5:非表示にする */
+    display: none;       /* ★1:標準では非表示にする */
+    margin: 0px;         /* ★2:サブメニュー外側の余白(ゼロ) */
+    padding: 0px;        /* ★3:サブメニュー内側の余白(ゼロ) */
+    position: absolute;  /* ★4:絶対配置にする */
+  }
+
+  .ddmenu li:hover ul {
+    display: block;      /* ★5:マウスポインタが載っている項目の内部にあるリストを表示する */
+  }
+  
+  .ddmenu ul li a {   /* ※B */
+    line-height: 55px;   /* サブメニュー1項目の高さ(35px) */
+    text-align: left;    /* 文字列の配置(左寄せ) */
+    font-family: Radley;
+    margin-left: 0px;
+    padding-left: 30px;
+    font-size: 20px;
+  }
+
+  #first-block {
+    height: 750px;
+    width:100%;
+    background-color: white;
+  }
    
-     function onScroll() {
-      if( lastPosition > height ) {
-        if( lastPosition > offset ) {
-          target.classList.add( 'head-animation' );
-        } else {
-        target.classList.remove( 'head-animation' );
-       }
-        offset = lastPosition;
+   .title-1{
+     display:flex;
+   }
+
+    .explain1{
+       display:flex;
+       margin-top: 120px;
+     }
+    
+      .explain1-1{
+        font-size: 60px;
+        font-family: 'Qwigley', cursive;
+        margin-left: 20%;
+        margin-right: 4%;
+        padding-top: -20px;
       }
+
+      .explain1-2{
+       font-size: 35px;
+       font-family: Radley;
+      }
+
+    .first-image{
+      height:455.11px;
+      width: 782px;
+      position:relative;
+      top: 2px;
+      left: 600px;
+    }
+  
+  #second-block {
+    display: flex;
+    height: 850px;
+    width:100%;
+    background-color: white;
+    margin-top: 10%;
+  }
+
+  @keyframes tonext {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: 100%;
+    }
+    98% {
+      left: 100%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+   
+  @keyframes tostart {
+    75% {
+      left: 0;
+    }
+    95% {
+      left: -300%;
+    }
+    98% {
+      left: -300%;
+    }
+    99% {
+      left: 0;
+    }
+  }
+   
+  @keyframes snap {
+    96% {
+      scroll-snap-align: center;
+    }
+    97% {
+      scroll-snap-align: none;
+    }
+    99% {
+      scroll-snap-align: none;
+    }
+    100% {
+      scroll-snap-align: center;
+    }
+  }
+   
+  .carousel {
+    position: fixed;
+    margin-left: -200px;
+    margin-right: -200px;
+    padding: 0 ;
+    font-family: 'Lato', sans-serif;
+    width:346px;
+    height:750px;
+  }
+   
+  * {
+    box-sizing: border-box;
+    scrollbar-color: transparent transparent; /* thumb and track color */
+    scrollbar-width: 0px;
+  }
+   
+  *::-webkit-scrollbar {
+    width: 0;
+  }
+   
+  *::-webkit-scrollbar-track {
+    background: transparent;
+  }
+   
+  *::-webkit-scrollbar-thumb {
+    background: transparent;
+    border: none;
+  }
+   
+  * {
+    -ms-overflow-style: none;
+  }
+   
+  ol, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+   
+  .carousel {
+    position: fixed;
+    margin-left: 0px;
+    margin-right: 0px;
+    filter: drop-shadow(0 0 10px #0003);
+    padding-top: 0%;
+    perspective: 100px;
+    
+  }
+   
+  .carousel__viewport {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    overflow-x: scroll;
+    counter-reset: item;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .carousel__slide {
+    position: fixed;
+    margin: 0;
+    flex: 0 0 100%;
+    width:100%;
+    background-image:url(../images/block2-1new.jpg); 
+    background-size: 100%;
+    counter-increment: item;
+    border-radius:50px 50px 30px 30px;
+  }
+   
+  .carousel__slide:nth-child(even) {
+    width:100%;
+    background-image:url(../images/block2-2new.jpg); 
+    background-size: 100%;
+  }
+   
+  .carousel__slide:before {
+    content: counter(item);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%,-40%,70px);
+    color: #fff;
+    font-size: 2em;
+  }
+   
+  .carousel__snapper {
+    position: fixed;
+    top: 0;
+    margin-left: 0;
+    width:100%;
+    height:100%;
+    scroll-snap-align: center;
+  }
+   
+  @media (hover: hover) {
+    .carousel__snapper {
+      animation-name: tonext, snap;
+      animation-timing-function: ease;
+      animation-iteration-count: infinite;
     }
    
-    window.addEventListener( 'scroll', function(e) {
-      lastPosition = window.scrollY;
-      if( !ticking ) {
-       window.requestAnimationFrame( function() {
-         onScroll( lastPosition );
-         ticking = false;
-       });
-       ticking = true;
-     }
-     });
-     })();
-  </script>
-
-    <div id="first-block">
-      <div class="title1">
-       <div class="explain1">
-         <p class="explain1-1">PlanB</p>
-         <p class="explain1-2">はお出かけプラン選び、プレゼント選びに<br>特化したアプリです</p>
-       </div>
-      <image src="images/block1_pana.jpg" class="first-image"></image>
-    </div>
-
-    <div id="second-block">
-      <section class="carousel" aria-label="Gallery">
-        <ol class="carousel__viewport">
-          <li id="carousel__slide1"
-              tabindex="0"
-              class="carousel__slide">
-            <div class="carousel__snapper">
-              <a href="#carousel__slide2"
-                 class="carousel__next">Go to next slide</a>
-            </div>
-          </li>
-          <li id="carousel__slide2"
-              tabindex="0"
-              class="carousel__slide">
-            <div class="carousel__snapper"></div>
-            <a href="#carousel__slide1"
-               class="carousel__prev">Go to previous slide</a>
-          </li>
-        </ol>
-        <aside class="carousel__navigation">
-          <ol class="carousel__navigation-list">
-            <li class="carousel__navigation-item">
-              <a href="#carousel__slide1"
-                 class="carousel__navigation-button">Go to slide 1</a>
-            </li>
-            <li class="carousel__navigation-item">
-              <a href="#carousel__slide2"
-                 class="carousel__navigation-button">Go to slide 2</a>
-            </li>
-          </ol>
-        </aside>
-      </section>  
-
-      <div class="letter2">
-        <div class="jenre2">
-          <p class="jenre2-1">閲覧及び検索</p>
-          <p class="jenre2-2">お出かけプラン</p>
-        </div>
-        <br>
-       <p class="title2">
-         エリア、プラン内容を選び自<br>分に合ったプランをすぐに見<br>つけられる
-       </p>
-       <br>
-       <p class="explain2">
-         やりたいことは決まっているけど、行き先が見つからない！<br>
-         そんな人にぴったりです。
-       </p>
-      </div>
-    </div>
-
-    <div class="miniblock1">
-      <image src="images/arrowdown.jpg" class="miniblock1-image"></image>
-    </div>
-
-    <div class="third-block">
-      <image src="images/block3new.jpg" class="third-image"></image>
-
-      <div class="letter3">
-        <p class="title3">
-         エリアをより細かく指定、マイ<br>ナーなプランも見つけられる
-        </p>
-        <br>
-        <p class="explain3">
-         市町村名まで指定することで、現在地からすぐ行けるところを<br>
-         ピックアップでき、キーワード検索にかけることで、幅広く<br>
-         プランを見つけ出せます。</p>
-      </div>
-    </div>
-
-    <div class="fourth-block">
-      <image src="images/block4_pana.jpg" class="fourth-image"></div>
-    </div>
-
-    <div id="fifth-block">
-      <div class="letter5">
-       <div class="jenre5">
-         <p class="jenre5-1">閲覧及び検索</p>
-         <p class="jenre5-2">プレゼント</p>
-       </div>
-       <br>
-       <p class="title5">
-         プレゼントの人気、新たな<br>トレンドを知ることができる
-       </p>
-       <br>
-       <p class="explain5">
-         投稿のいいね！の数に基づく人気順、新着順の２種類で投稿<br>
-         の表示が選択できます。
-       </p>
-      </div>
-
-      <image src="images/block5new.jpg" class="fifth-image"></image>
-    </div>
-
-    <div class="miniblock2">
-      <image src="images/arrowdown.jpg" class="miniblock2-image"></image>
-    </div>
+    .carousel__slide:last-child .carousel__snapper {
+      animation-name: tostart, snap;
+    }
+  }
+   
+  @media (prefers-reduced-motion: reduce) {
+    .carousel__snapper {
+      animation-name: none;
+    }
+  }
+   
+  .carousel:hover .carousel__snapper,
+  .carousel:focus-within .carousel__snapper {
+    animation-name: none;
+  }
+   
+  .carousel__navigation {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+  }
+   
+  .carousel__navigation-list,
+  .carousel__navigation-item {
+    display: inline-block;
+  }
+   
+  .carousel__navigation-button {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: #333;
+    background-clip: content-box;
+    border: 0.25rem solid transparent;
+    border-radius: 50%;
+    font-size: 0;
+    transition: transform 0.1s;
+  }
+   
+  .carousel::before,
+  .carousel::after,
+  .carousel__prev,
+  .carousel__next {
+    position: absolute;
+    top: 35%;
+    margin-top: 37.5%;
+    width: 4rem;
+    height: 4rem;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    font-size: 0;
+    outline: 0;
+  }
+   
+  .carousel::before,
+  .carousel__prev {
+    left: -1rem;
+  }
+   
+  .carousel::after,
+  .carousel__next {
+    right: -1rem;
+    margin-left: 50px;
+    z-index: 20px;
     
-    <div class="sixth-block">
-      <div class="letter6">
-       <p class="title6">
-        自分の状況に合ったもの<br>だけに絞りこむ
-       </p>
-       <br>
-       <p class="explain6">
-        贈る相手や、金額、プレゼントの名目などに絞って<br>
-        検索をかけることによって、よりスピーディに参考<br>
-        にしたい投稿に出会えます。
-       </p>
-      </div>
+  }
+   
+  .carousel::before,
+  .carousel::after {
+    content: '';
+    z-index: 1;
+    background-color: #333;
+    background-size: 1.5rem 1.5rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    text-align: center;
+    pointer-events: none;
+  }
+   
+  .carousel::before {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+  }
+   
+  .carousel::after {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+  }
 
-      <image src="images/block6new.jpg" class="sixth-image"></image>
-    </div>
+    .letter2{
+      margin-top:auto;
+      margin-bottom: auto; 
+      margin-left: -120px; 
+      margin-right: 260px;
+      line-height: 40px;
+    }
 
-    <div class="seventh-block">
-      <image src="images/block7_pana.jpg" class="seventh-image"></div>
-    </div>
+    .jenre2{
+     display:flex;
+    }
 
-    <div id="eighth-block">
-      <image src="images/block8new.jpg" class="eighth-image"></image>
+     .jenre2-1{
+       font-size: 24px;
+       font-family: BIZ UDPゴシック;
+       color:black;
+       margin-right:50px;
+      }
 
-      <div class="letter8">
-       <div class="jenre8">
-         <p class="jenre8-1">投稿</p>
-         <p class="jenre8-2">お出かけプラン</p>
-       </div>
-       <br>
-       <p class="title8">
-         実際にお出掛けして共有・知って<br>
-         欲しいことを投稿する
-       </p>
-       <br>
-       <p class="explain8">
-         場所はどこなのか、何の目的で利用したのか、予算は<br>
-         いくらか、移動手段、混雑具合、など詳しく投稿する<br>
-         ようにチェック項目欄を設けています。
-       </p>
-      </div>
-    </div>
+      .jenre2-2{
+       font-size: 24px;
+       font-family: BIZ UDPゴシック;
+       color:#FF725E;
+      }
 
-    <div class="ninth-block">
-      <image src="images/block9_cuate.jpg" class="ninth-image"></div>
-    </div>
+    .title2{
+      font-size: 45px;
+      font-family: BIZ UDPゴシック;
+      line-height: 70px;
+    }
 
-    <div id="tenth-block">
-       <div class="letter10">
-         <div class="jenre10">
-          <p class="jenre10-1">投稿</p>
-          <p class="jenre10-2">プレゼント</p>
-       </div>
-       <br>
-       <p class="title10">
-         実際にプレゼントを贈ったもの<br>と投稿する
-       </p>
-       <br>
-       <p class="explain10">
-         誰に贈るのか、金額はいくらか、何の目的で贈った<br>
-         のか詳しく投稿するようにチェック項目欄を設けています。<br>
-         自由記述欄により詳しく経緯説明をして思い出の記録にも。
-       </p>
-      </div>
+    .explain2{
+      font-size: 20px;
+      font-family: BIZ UDPゴシック;
+      color: #545454;
+    }
+  
+  .miniblock1{
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
 
-      <image src="images/block10new.jpg" class="tenth-image"></image>
+  .third-block {
+    display: flex;
+    height: 850px;
+    width:100%;
+    background-color: white;
+  }
 
-    </div>
+   .third-image{
+     height: 750px;
+     width: 346px;
+     margin-top:auto;
+     margin-bottom: auto;
+     margin-left: 16%;
+     margin-right: 6%;
+    }
 
-    <footer> 
-      <p class="footer1">
-      <small>© 2021　しゃいにんぐ☆</small>  </p> 
-    </footer>
+    .letter3{
+      margin-top:auto;
+      margin-bottom: auto; 
+      line-height: 40px;
+    }
 
-    <div id="page_top"><a href="#">
-    </a></div>
- </body>
-</html>
+   .title3{
+     font-size: 45px;
+     font-family: Radley;
+     line-height: 70px;
+    }
+
+    .explain3{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+  .fourth-block{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    background-color: white;
+  }
+  
+   .fourth-image{
+     width: 431px;
+     height: 360px;
+     margin-left: auto;
+     margin-right: auto;
+     margin-top: auto;
+     margin-bottom: auto;
+    }
+  
+  #fifth-block{
+    display: flex;
+    height: 3000px;
+    width:100%;
+    background-color: white;
+  }
+
+   .letter5{
+     margin-top:auto;
+     margin-bottom: 21%; 
+     margin-left: 15%;
+     margin-right: 6%;
+     line-height: 40px;
+    }
+
+   .jenre5{
+     display:flex;
+    }
+
+     .jenre5-1{
+       font-size: 24px;
+       font-family: Radley;
+       color:black;
+       margin-right:50px;
+      }
+
+     .jenre5-2{
+       font-size: 24px;
+       font-family: Radley;
+       color:#FF725E;
+      }
+
+    .title5{
+      font-size: 45px;
+      font-family: Radley;
+      line-height: 70px;
+     }
+
+    .explain5{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+    .fifth-image{
+      height: 750px;
+      width: 346px;
+      margin-top:auto;
+      margin-left: 1%;
+      margin-bottom: 3%;
+    }
+
+  .miniblock2{
+     width:100%;
+     height:50px;
+     display:flex;
+     justify-content: center;
+     align-items: center;
+     background-color: white;
+  }
+
+  .sixth-block{
+    display: flex;
+    height: 850px;
+    width:100%;
+    background-color: white;
+  }
+    
+   .letter6{
+     margin-top:auto;
+     margin-bottom: auto; 
+     margin-left: 17%;
+     margin-right: 5.5%;
+     line-height: 40px;
+    }
+
+    .title6{
+      font-size: 45px;
+      font-family: Radley;
+      line-height: 70px;
+    }
+
+    .explain6{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+    .sixth-image{
+      height: 750px;
+      width: 346px;
+      margin-top:auto;
+      margin-bottom: auto;
+      margin-left: 6%;
+    }
+
+  .seventh-block{
+    display: flex;
+    width:100%;
+    height: 480px;
+    background-color: white;
+  }
+    
+    .seventh-image{
+      height: 360px;
+      width: 431px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+  #eighth-block{
+    display: flex;
+    height: 850px;
+    width:100%;
+    background-color: white;
+  }
+  
+   .eighth-image{
+     height: 750px;
+     width: 346px;
+     margin-top:auto;
+     margin-bottom: auto;
+     margin-left: 16%;
+     margin-right: 6%;
+    }
+
+    .letter8{
+      margin-top:auto;
+      margin-bottom: auto; 
+      line-height: 40px;
+    }
+
+   .jenre8{
+     display:flex;
+    }
+
+     .jenre8-1{
+       font-size: 24px;
+       font-family: Radley;
+       color:black;
+       margin-right:50px;
+      }
+
+     .jenre8-2{
+       font-size: 24px;
+       font-family: Radley;
+       color:#FF725E;
+      }
+
+   .title8{
+     font-size: 45px;
+     font-family: Radley;
+     line-height: 70px;
+    }
+
+    .explain8{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+  .ninth-block{
+    display: flex;
+    width:100%;
+    height: 480px;
+    background-color: white;
+  }
+
+    .ninth-image{
+      height: 360px;
+      width: 431px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: auto;
+      margin-bottom: auto;
+    }
+
+  #tenth-block{
+    display: flex;
+    width:100%;
+    height: 850px;
+    background-color: white;
+  }
+
+   .letter10{
+    margin-top:auto;
+    margin-bottom: auto; 
+    margin-left: 15%;
+    line-height: 40px;
+   }
+
+    .jenre10{
+     display:flex;
+    }
+
+     .jenre10-1{
+       font-size: 24px;
+       font-family: Radley;
+       color:black;
+       margin-right:50px;
+      }
+
+     .jenre10-2{
+       font-size: 24px;
+       font-family: Radley;
+       color:#FF725E;
+      }
+
+    .title10{
+      font-size: 45px;
+      font-family: Radley;
+      line-height: 70px;
+     }
+
+    .explain10{
+      font-size: 20px;
+      font-family: Radley;
+      color: #545454;
+    }
+
+    .tenth-image{
+      height: 750px;
+      width: 346px;
+      margin-top:auto;
+      margin-bottom: auto;
+      margin-left: 6%;
+    }  
+
+    @keyframes tonext {
+      75% {
+        left: 0;
+      }
+      95% {
+        left: 100%;
+      }
+      98% {
+        left: 100%;
+      }
+      99% {
+        left: 0;
+      }
+    }
+     
+    @keyframes tostart {
+      75% {
+        left: 0;
+      }
+      95% {
+        left: -300%;
+      }
+      98% {
+        left: -300%;
+      }
+      99% {
+        left: 0;
+      }
+    }
+     
+    @keyframes snap {
+      96% {
+        scroll-snap-align: center;
+      }
+      97% {
+        scroll-snap-align: none;
+      }
+      99% {
+        scroll-snap-align: none;
+      }
+      100% {
+        scroll-snap-align: center;
+      }
+    }
+     
+    .carousel {
+      margin: 0 auto;
+      padding: 0 ;
+      font-family: 'Lato', sans-serif;
+      width:346px;
+      height:725px;
+    }
+     
+    * {
+      box-sizing: border-box;
+      scrollbar-color: transparent transparent; /* thumb and track color */
+      scrollbar-width: 0px;
+    }
+     
+    *::-webkit-scrollbar {
+      width: 0;
+    }
+     
+    *::-webkit-scrollbar-track {
+      background: transparent;
+    }
+     
+    *::-webkit-scrollbar-thumb {
+      background: transparent;
+      border: none;
+    }
+     
+    * {
+      -ms-overflow-style: none;
+    }
+     
+    ol, li {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+     
+    .carousel {
+      position: relative;
+      filter: drop-shadow(0 0 10px #0003);
+      padding-top: 0%;
+      perspective: 100px;
+      
+    }
+     
+    .carousel__viewport {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      overflow-x: scroll;
+      counter-reset: item;
+      scroll-behavior: smooth;
+      scroll-snap-type: x mandatory;
+    }
+  
+    .carousel__slide {
+      position: relative;
+      flex: 0 0 100%;
+      width:100%;
+      background-image:url(../images/block2-1new.jpg); 
+      background-size: 100%;
+      counter-increment: item;
+      border-radius:50px 50px 50px 50px;
+    }
+     
+    .carousel__slide:nth-child(even) {
+      width:100%;
+      background-image:url(../images/block2-2new.jpg); 
+      background-size: 100%;
+    }
+     
+    .carousel__slide:before {
+      content: counter(item);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate3d(-50%,-40%,70px);
+      color: #fff;
+      font-size: 2em;
+    }
+     
+    .carousel__snapper {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:100%;
+      height:100%;
+      scroll-snap-align: center;
+    }
+     
+    @media (hover: hover) {
+      .carousel__snapper {
+        animation-name: tonext, snap;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+      }
+     
+      .carousel__slide:last-child .carousel__snapper {
+        animation-name: tostart, snap;
+      }
+    }
+     
+    @media (prefers-reduced-motion: reduce) {
+      .carousel__snapper {
+        animation-name: none;
+      }
+    }
+     
+    .carousel:hover .carousel__snapper,
+    .carousel:focus-within .carousel__snapper {
+      animation-name: none;
+    }
+     
+    .carousel__navigation {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      text-align: center;
+    }
+     
+    .carousel__navigation-list,
+    .carousel__navigation-item {
+      display: inline-block;
+    }
+     
+    .carousel__navigation-button {
+      display: inline-block;
+      width: 1.5rem;
+      height: 1.5rem;
+      background-color: #FADEB4;
+      background-clip: content-box;
+      border: 0.25rem solid transparent;
+      border-radius: 50%;
+      font-size: 0;
+      transition: transform 0.1s;
+    }
+     
+    .carousel::before,
+    .carousel::after,
+    .carousel__prev,
+    .carousel__next {
+      position: absolute;
+      top: 35%;
+      margin-top: 37.5%;
+      width: 4rem;
+      height: 4rem;
+      transform: translateY(-50%);
+      border-radius: 50%;
+      font-size: 0;
+      outline: 0;
+    }
+     
+    .carousel::before,
+    .carousel__prev {
+      left: -1rem;
+    }
+     
+    .carousel::after,
+    .carousel__next {
+      right: -1rem;
+      margin-left: 50px;
+      z-index: 20px;
+      
+    }
+     
+    .carousel::before,
+    .carousel::after {
+      content: '';
+      z-index: 1;
+      background-color: rgba(51, 51, 51, 0.651);
+      background-size: 1.5rem 1.5rem;
+      background-repeat: no-repeat;
+      background-position: center center;
+      color: #fff;
+      font-size: 2.5rem;
+      line-height: 4rem;
+      text-align: center;
+      pointer-events: none;
+    }
+     
+    .carousel::before {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='0,50 80,100 80,0' fill='%23fff'/%3E%3C/svg%3E");
+    }
+     
+    .carousel::after {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpolygon points='100,50 20,100 20,0' fill='%23fff'/%3E%3C/svg%3E");
+    }
+  
+
+  footer{
+    height: 80px;
+    background-color: #FAFAFA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+  }
+
+  .footer1{
+     color: black;
+  }
+
+  #page_top{
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 30px;
+    background-color: #FADEB4;
+    opacity: 1;
+    border-radius:30px;
+  }
+  #page_top a{
+    position: relative;
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-decoration: none;
+  }
+  #page_top a::before{
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    content: '\f102';
+    font-size: 25px;
+    color: hsla(0, 0%, 0%, 0.479);
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+  }
