@@ -83,7 +83,7 @@
   .ddmenu ul li a {   /* ※B */
     line-height: 55px;   /* サブメニュー1項目の高さ(35px) */
     text-align: left;    /* 文字列の配置(左寄せ) */
-    font-family: Radley;
+    font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
     margin-left: 0px;
     padding-left: 30px;
     font-size: 20px;
@@ -114,7 +114,7 @@
 
       .explain1-2{
        font-size: 35px;
-       font-family: Radley;
+       font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       }
 
     .first-image{
@@ -389,26 +389,26 @@
 
      .jenre2-1{
        font-size: 24px;
-       font-family: BIZ UDPゴシック;
+       font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
        color:black;
        margin-right:50px;
       }
 
       .jenre2-2{
        font-size: 24px;
-       font-family: BIZ UDPゴシック;
+       font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
        color:#FF725E;
       }
 
     .title2{
       font-size: 45px;
-      font-family: BIZ UDPゴシック;
+      font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       line-height: 70px;
     }
 
     .explain2{
       font-size: 20px;
-      font-family: BIZ UDPゴシック;
+      font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       color: #545454;
     }
   
@@ -445,13 +445,13 @@
 
    .title3{
      font-size: 45px;
-     font-family: Radley;
+     font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
      line-height: 70px;
     }
 
     .explain3{
       font-size: 20px;
-      font-family: Radley;
+      font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       color: #545454;
     }
 
@@ -492,26 +492,26 @@
 
      .jenre5-1{
        font-size: 24px;
-       font-family: Radley;
+       font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
        color:black;
        margin-right:50px;
       }
 
      .jenre5-2{
        font-size: 24px;
-       font-family: Radley;
+       font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
        color:#FF725E;
       }
 
     .title5{
       font-size: 45px;
-      font-family: Radley;
+      font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       line-height: 70px;
      }
 
     .explain5{
       font-size: 20px;
-      font-family: Radley;
+      font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       color: #545454;
     }
 
@@ -549,13 +549,13 @@
 
     .title6{
       font-size: 45px;
-      font-family: Radley;
+      font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       line-height: 70px;
     }
 
     .explain6{
       font-size: 20px;
-      font-family: Radley;
+      font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       color: #545454;
     }
 
@@ -611,26 +611,26 @@
 
      .jenre8-1{
        font-size: 24px;
-       font-family: Radley;
+       font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
        color:black;
        margin-right:50px;
       }
 
      .jenre8-2{
        font-size: 24px;
-       font-family: Radley;
+       font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
        color:#FF725E;
       }
 
    .title8{
      font-size: 45px;
-     font-family: Radley;
+     font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
      line-height: 70px;
     }
 
     .explain8{
       font-size: 20px;
-      font-family: Radley;
+      font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       color: #545454;
     }
 
@@ -670,26 +670,26 @@
 
      .jenre10-1{
        font-size: 24px;
-       font-family: Radley;
+       font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
        color:black;
        margin-right:50px;
       }
 
      .jenre10-2{
        font-size: 24px;
-       font-family: Radley;
+       font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
        color:#FF725E;
       }
 
     .title10{
       font-size: 45px;
-      font-family: Radley;
+      font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       line-height: 70px;
      }
 
     .explain10{
       font-size: 20px;
-      font-family: Radley;
+      font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
       color: #545454;
     }
 
@@ -950,6 +950,7 @@
 
   .footer1{
      color: black;
+     font-family:  "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo";
   }
 
   #page_top{
